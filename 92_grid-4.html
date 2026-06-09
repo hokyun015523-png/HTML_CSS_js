@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 800px;
+            border: 1px solid #ccc;
+            display: grid;
+            margin-bottom: 20px;
+        }
+        /* 남는 공간을 아이템들이 나누어 가져서 가로로 꽉 참 */
+        .container-1 {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+        /* 오타 수정: .container-1 -> .container-2 */
+        /* 빈 트랙을 그대로 유지하므로 아이템이 최소 너비(100px) 근처로 유지됨 */
+        .container-2 {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+        .items {
+            border: 1px solid #222;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .items:nth-child(odd) {
+            background-color: #d6f9ff;
+        }
+        .items:nth-child(even) {
+            background-color: #ffc400;
+        }
+    </style>
+</head>
+<body>
+    <h1>auto-fit일 때</h1>
+    <div class="container container-1">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+    </div>
+    
+    <h1>auto-fill일 때</h1>
+    <!-- container-2로 클래스 매칭 및 누락된 닫는 div 태그 추가 -->
+    <div class="container container-2">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+    </div> 
+</body>
+</html>

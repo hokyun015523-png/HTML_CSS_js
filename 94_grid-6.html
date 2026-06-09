@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 부모 그리드 컨테이너 설정 */
+        .container {
+            width: 700px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3열 */
+            grid-template-rows: repeat(3, 100px);  /* 3행 */
+            gap: 1rem;
+        }
+        .box {
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+        }
+        /* 자식 아이템 위치 설정 */
+        .box1 {
+            background-color: #3689ff;
+            grid-column: 1 / 4; /* 1열부터 4열 앞까지 (전체 차지) */
+            grid-row: 1 / 2;    /* 1행 */
+        }
+        .box2 {
+            background-color: #00cf12;
+            grid-column: 1 / 2; /* 1열 */
+            grid-row: 2 / 4;    /* 2행부터 4행 앞까지 (2층 높이) */
+        }
+        .box3 {
+            background-color: #ff9019;
+            grid-column: 2 / 4; /* 2열부터 4열 앞까지 */
+            grid-row: 2 / 3;    /* 2행 */
+        }
+        .box4 {
+            background-color: #ffd000;
+            grid-column: 2 / 3; /* 2열 */
+            grid-row: 3 / 4;    /* 3행 */
+        }
+        .box5 {
+            background-color: #ff3f3f;
+            grid-column: 3 / 4; /* 3열 */
+            grid-row: 3 / 4;    /* 3행 */
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 오타 수정: contanier -> container -->
+    <div class="container">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        <div class="box box5">box5</div>
+    </div>
+</body>
+</html>

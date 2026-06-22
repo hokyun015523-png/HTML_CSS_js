@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Quiz 2</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #ffe867;      
+            animation: changeColor 3s infinite, 
+                       translate-anim 3s infinite alternate;
+        }
+        @keyframes changeColor {
+            0% {
+                background-color: #ffe867;
+            }
+            50% {
+                background-color: #ff5e62;
+            }
+            100% {
+                background-color: #17bdff;
+            }
+        }
+        @keyframes translate-anim {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(400px);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
